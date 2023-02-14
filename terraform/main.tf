@@ -69,7 +69,7 @@ resource "aws_nat_gateway" "eks_ngw" {
 resource "aws_subnet" "eks_private_subnet" {
   vpc_id                  = aws_vpc.eks_vpc.id
   cidr_block              = "10.0.2.0/24"
-  map_public_ip_on_launch = true
+  map_public_ip_on_launch = false
   availability_zone       = var.availability_zone[1]
 
   tags = {
@@ -85,7 +85,7 @@ resource "aws_route_table" "eks_private_rt" {
 resource "aws_route" "default_private_route" {
   route_table_id         = aws_route_table.eks_private_rt.id
   destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = aws_internet_gateway.eks_internet_gateway.id
+  nat_gateway_id         = aws_nat_gateway.eks_ngw.id
 }
 
 resource "aws_route_table_association" "eks_private_assoc" {
@@ -96,7 +96,7 @@ resource "aws_route_table_association" "eks_private_assoc" {
 resource "aws_subnet" "eks_private_subnet2" {
   vpc_id                  = aws_vpc.eks_vpc.id
   cidr_block              = "10.0.4.0/24"
-  map_public_ip_on_launch = true
+  map_public_ip_on_launch = false
   availability_zone       = var.availability_zone[0]
 
   tags = {
