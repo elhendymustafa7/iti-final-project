@@ -88,3 +88,5 @@ kubectl -n jenkins exec -it pod/jenkins-f7959cc74-vdkzj cat /var/jenkins_home/se
 ```
 ![image](https://user-images.githubusercontent.com/58703269/218819868-dc34f2df-918a-4ad5-ad6c-539af736e970.png)
 
+![image](https://user-images.githubusercontent.com/58703269/218878698-8ad2509d-f4e9-4a17-bdd2-5e372b176ab2.png)
+
