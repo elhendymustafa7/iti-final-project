@@ -90,3 +90,37 @@ kubectl -n jenkins exec -it pod/jenkins-f7959cc74-vdkzj cat /var/jenkins_home/se
 
 ![image](https://user-images.githubusercontent.com/58703269/218878698-8ad2509d-f4e9-4a17-bdd2-5e372b176ab2.png)
 
+![image](https://user-images.githubusercontent.com/58703269/218881230-cfc7eddc-5615-481d-8898-f508ea50056f.png)
+
+## Create pipeline job
+![image](https://user-images.githubusercontent.com/58703269/218895555-8b5af5c2-d5b7-4a8f-a1a1-9a7f2d1a748a.png)
+
+![image](https://user-images.githubusercontent.com/58703269/218895653-be1c8089-c0f0-48b8-92a5-1bbf019dac07.png)
+
+
+## Create service account to allow any Kubernetes user to have admin access
+```bash
+kubectl create clusterrolebinding serviceaccounts-cluster-admin \
+  --clusterrole=cluster-admin \
+  --group=system:serviceaccounts
+clusterrolebinding.rbac.authorization.k8s.io/serviceaccounts-cluster-admin created
+
+```
+
+## Build pipeline
+
+![image](https://user-images.githubusercontent.com/58703269/218896053-974c7342-187b-485e-b80a-21719e2941d3.png)
+
+![image](https://user-images.githubusercontent.com/58703269/218896158-1059b39c-db79-46b6-b4bf-6a1e955e1d0e.png)
+
+![image](https://user-images.githubusercontent.com/58703269/218896241-22ec8e20-bf9d-4a41-aecd-cbdca0502cc4.png)
+
+![image](https://user-images.githubusercontent.com/58703269/218896298-ba61400a-c181-4d6b-9172-470c58fd7a8b.png)
+
+![image](https://user-images.githubusercontent.com/58703269/218896342-ab2908f1-540a-4f3c-8415-531fb9499034.png)
+
+![image](https://user-images.githubusercontent.com/58703269/218896479-1dc73e97-7ad7-4a9f-89ae-42b86eafe66c.png)
+
+![image](https://user-images.githubusercontent.com/58703269/218896479-1dc73e97-7ad7-4a9f-89ae-42b86eafe66c.png)
+
+![image](https://user-images.githubusercontent.com/58703269/218896545-679a3893-4067-4b1a-933c-98a1eabbaf81.png)
