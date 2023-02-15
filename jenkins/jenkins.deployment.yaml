@@ -22,7 +22,7 @@ spec:
       serviceAccountName: jenkins
       containers:
       - name: jenkins
-        image: jenkins/jenkins:lts
+        image: mustafaelhendy/jenkins_docker_image
         imagePullPolicy: IfNotPresent
         env:
         - name: JAVA_OPTS
@@ -35,6 +35,34 @@ spec:
         volumeMounts:
         - mountPath: /var/jenkins_home
           name: jenkins
+        - name: dockersock
+          mountPath: /var/run/docker.sock
+
+        - name: docker
+          mountPath: /usr/bin/docker
+          subPath: docker
+
+        - name: kubernetes
+          mountPath: /usr/bin/kubectl
+          subPath: kubectl
+      initContainers:
+        - name: init-docker
+          image: docker
+          command: ["cp","/usr/local/bin/docker", "/opt/tmp"]
+       
+            
+          volumeMounts:  
+            - name: docker
+              mountPath: /opt/tmp
+
+        - name: init-k8s
+          image: alpine/k8s:1.23.13
+          command: ["cp","/usr/bin/kubectl","/opt/temp"]
+
+          volumeMounts:
+            - name: kubernetes
+              mountPath: "/opt/temp"
+
       restartPolicy: Always
       securityContext:
         runAsUser: 0
@@ -43,3 +71,13 @@ spec:
       - name: jenkins
         persistentVolumeClaim:
           claimName: jenkins-claim
+      - name: docker
+        emptyDir: {}
+
+      - name: dockersock
+        hostPath:
+          path: /var/run/docker.sock
+
+      - name: kubernetes
+        emptyDir: {}
+

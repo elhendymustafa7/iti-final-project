@@ -3,9 +3,9 @@ kind: PersistentVolumeClaim
 metadata:
   name: jenkins-claim
 spec:
-  storageClassName: manual
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
+  storageClassName: efs-sc1
   resources:
     requests:
-      storage: 4Gi
+      storage: 5Gi
