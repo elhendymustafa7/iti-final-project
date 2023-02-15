@@ -122,3 +122,9 @@ clusterrolebinding.rbac.authorization.k8s.io/serviceaccounts-cluster-admin creat
 ![image](https://user-images.githubusercontent.com/58703269/218896479-1dc73e97-7ad7-4a9f-89ae-42b86eafe66c.png)
 
 ![image](https://user-images.githubusercontent.com/58703269/218896545-679a3893-4067-4b1a-933c-98a1eabbaf81.png)
+
+## Expose Jenkins and web app from mobile
+
+![WhatsApp Image 2023-02-15 at 3 03 18 AM](https://user-images.githubusercontent.com/58703269/218898682-487f5ed5-5067-4f52-8676-06db6c652a1d.jpeg)
+
+![WhatsApp Image 2023-02-15 at 3 04 11 AM](https://user-images.githubusercontent.com/58703269/218898799-c07f8819-d30e-4a85-ad35-61a1908e3b94.jpeg)
