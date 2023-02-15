@@ -1,4 +1,6 @@
-# Deploy ci-cd pipeline in AWS EKS
+# Deploy backend application on eks using ci-cd Jenkins pipeline 
+
+![image](https://user-images.githubusercontent.com/58703269/219072157-8fb0b860-982a-4055-8621-8b7110594d6b.png)
 
 ## run terraform to create eks cluster 
 ```bash
@@ -133,3 +135,6 @@ clusterrolebinding.rbac.authorization.k8s.io/serviceaccounts-cluster-admin creat
 ![WhatsApp Image 2023-02-15 at 3 03 18 AM](https://user-images.githubusercontent.com/58703269/218898682-487f5ed5-5067-4f52-8676-06db6c652a1d.jpeg)
 
 ![WhatsApp Image 2023-02-15 at 3 04 11 AM](https://user-images.githubusercontent.com/58703269/218898799-c07f8819-d30e-4a85-ad35-61a1908e3b94.jpeg)
+
+## app repo 
+[repo](https://github.com/elhendymustafa7/backhouse-webapp)
