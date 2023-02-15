@@ -121,6 +121,4 @@ clusterrolebinding.rbac.authorization.k8s.io/serviceaccounts-cluster-admin creat
 
 ![image](https://user-images.githubusercontent.com/58703269/218896479-1dc73e97-7ad7-4a9f-89ae-42b86eafe66c.png)
 
-![image](https://user-images.githubusercontent.com/58703269/218896479-1dc73e97-7ad7-4a9f-89ae-42b86eafe66c.png)
-
 ![image](https://user-images.githubusercontent.com/58703269/218896545-679a3893-4067-4b1a-933c-98a1eabbaf81.png)
